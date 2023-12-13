@@ -60,8 +60,19 @@ We now come to the second class of algebraic geometry codes.
 	$k^*+d^*\geq n-\deg(\mcG)+(g-1)+\deg(\mcG)-2(g-1)=n-(g-1)$
 \end{proof}
 \begin{example}
-	Let $L=\{\alpha_1,\dots,\alpha_n\}$ be a set of $n$ distinct elements of $\bbF_{q^m}$. Let $g$ be a polynomail in $\bbF_{q^m}[X]$ which is not zero at $\alpha_i$ for all $i\in [n]$. The \textit{Classical Goppa Code} $\Gm(L,g)$ is defined by $$\Gm(L,g)=\lt\{\ovc\in \bbF_q^n\mid \sum_{i=1}^n\frac{c_i}{X-\alpha_i}\equiv 0 \pmod{g}\rt\}$$Let $P_i=(\alpha_i:1)$, $Q=(1:0)$ and $\mcD=P_1+\dots+P_n$. If we take for $E$ the divisor of zeros of $g$ on the projective line, then $$\Gm(L,g)=C^*(\mcD, E-Q)$$ and $$\ovc\in \Gm(L,g)\iff \sum_{i=1}^n{c_i}{X-\alpha_i}dX\in \Om(E-Q-\mcD)$$
+	Let $L=\{\alpha_1,\dots,\alpha_n\}$ be a set of $n$ distinct elements of $\bbF_{q^m}$. Let $g$ be a polynomail in $\bbF_{q^m}[X]$ which is not zero at $\alpha_i$ for all $i\in [n]$. The \textit{Classical Goppa Code} $\Gm(L,g)$ is defined by $$\Gm(L,g)=\lt\{\ovc\in \bbF_q^n\mid \sum_{i=1}^n\frac{c_i}{X-\alpha_i}\equiv 0 \pmod{g}\rt\}$$Let $P_i=(\alpha_i:1)$, $Q=(1:0)$ and $\mcD=P_1+\dots+P_n$. If we take for $E$ the divisor of zeros of $g$ on the projective line, then $$\Gm(L,g)=C^*(\mcD, E-Q)$$ and $$\ovc\in \Gm(L,g)\iff \sum_{i=1}^n\frac{c_i}{X-\alpha_i}dX\in \Om(E-Q-\mcD)$$
 	
 	It is a well-known fact that the parity check matrix of the Goppa Code $\Gm(L,g)$ is equal to the following generator matrix of a generalized $RS$ code $$\mat{g(\alpha_1)^{-1}  & \cdots & g(\alpha_n)^{-1}\\ \alpha_1g(\alpha_1)^{-1}  & \cdots & \alpha_ng(\alpha_n)^{-1}\\ \vdots & \ddots & \vdots \\ \alpha_1^{r-1}g(\alpha_1)^{-1}  & \cdots & \alpha_n^{r-1}g(\alpha_n)^{-1}}$$where $r$ is the degree of the Goppa polynomial $g$.
 \end{example}
-\section{Relation Between The 2 Codes}
+\section{Relation between the 2 Codes}
+\begin{theorem}
+	The codes $C(\mcD,\mcG)$ and $C^*(\mcD,\mcG)$ are dual codes.
+\end{theorem}
+\begin{theorem}
+	Let $\mcX$ be a curve defined over $\bbF_q$. Let $P_1,\dots, P_n$ be $n$ rational points on $\mcX$. Let $\mcD=P_1+\cdots+P_n$. Then there exists a differential form $\om$ with simple poles at the $P_i$ such that $\res_{P_i}(\om)=1$ for all $i\in [n]$. Furthermore $$C^*(\mcD,\mcG)=C(\mcD,W+\mcD-\mcG)$$
+\end{theorem}
+So one can do without differentials and the codes $C^*(\mcD,\mcG)$. However it is usefull to have both classes when treating decoding methods. These use parity check, so one needs a generator matrix for the dual codes.
+
+\begin{theorem}
+	For any algebraic geometry code with dimension $k$ and distance $k$ on a curve of genus $g$ with $n$ points that are defined over $\bbF_q$ satisfy $$k+d\geq n-(g-1)\iff R+\delta \geq 1-\frac{g-1}{n}$$
+\end{theorem}
