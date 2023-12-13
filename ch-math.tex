@@ -1,0 +1,46 @@
+\chapter{Mathematics}
+\section{Divisors}
+\section{Reimann-Roch Spaces}
+\begin{definition}[Reimann-Roch Spaces]
+	For any divisor $\mcD\in \tilde{\mfD}$ $$\mcL(\mcD)=\{f\in \bbF(\mcX)^*\mid (f)+\mcD\succcurlyeq 0 \}\cup \{0\}$$The dimension of $\mcL(\mcD)$ over $\bbF$ is denoted by $l(\mcD)$
+\end{definition}
+\begin{theorem}
+	\begin{enumerate}[label=(\roman*)]\label{rrspacedim}
+		\item If $\deg(\mcD)<0$ then $l(\mcD)=0$
+		\item $l(\mcD)\leq 1+\deg(\mcD)$
+	\end{enumerate}
+\end{theorem}
+\begin{theorem}\label{0divrrspacedim}
+	$\mcL(0)=\bbF$. Hence $l(0)=1$
+\end{theorem}
+
+\section{Differentials}
+
+\section{Reimann-Roch Theorem}
+
+\begin{theorem}[Reimann-Roch Theorem]
+	$\mcD$ is a divisor on a smooth projective curve with genus $g$. Then for any canonical divisor $W$ $$l(\mcD) - l(W-\mcD)= \deg(\mcD)- (g-1)$$
+\end{theorem}
+\begin{corollary}\label{candivdeg}
+	For any canonical divisor $W$,  $\deg(W)=2g-2$
+\end{corollary}
+\begin{proof}
+	Take $\mcD=W$. Then $l(W-\mcD)=l(0)=1$ by \thmref{0divrrspacedim}. So we have $$l(W)-1=\deg(W)-(g-1)$$. By definition $l(W)=g$. Hence we have $g-1=\deg(W)-(g-1)\iff \deg(W)=2g-2$.
+\end{proof}
+With the help of this corollary we can finally focus on the divisors which we will actually use to define codes. The following corollary gives the dimension of the Reimann-Roch Spaces of divisors with degree more than $2g-2$.
+\begin{corollary}
+	Let $\mcD$ be a divisor on a smooth projective curve of genus $g$ and let $\deg(\mcD)>2g-2$. Then $$l(\mcD)=\deg(D)-(g-1)$$
+\end{corollary}
+\begin{proof}
+	We have $\deg(W-\mcD)=\deg(W)-\deg(\mcD)$. Now by \corref{candivdeg} $\deg(W-\mcD)<0$. So0 $l(W-\mcD)=0$ by \thmref{rrspacedim} part (ii). So We have $l(D)=\deg(D)-(g-1)$.
+\end{proof}
+\section{Index of speciality}
+\begin{definition}[Index of speciality]
+	Let $\mcD$ be a divisor on a curve $\mcX$. We define $$\Om(\mcD)=\{\om\in \Om(\mcX)\mid (w)-D\succcurlyeq 0\}$$ and we denote the dimension of $\Om(\mcD)$ over $\bbF$ by $\delta(\mcD)$ called the index of speciality of $\mcD$.
+\end{definition}
+\begin{theorem}
+	$\delta(\mcD)=l(W-\mcD)$
+\end{theorem}
+\begin{proof}
+	If $W=(\om)$. Define the linear map $\varphi:\mcL(W-\mcD)\to \Om(\mcD)$ by $\varphi(f)=f\om$. $$f\in \mcL(W-\mcD)\implies (f)+W-\mcD\succcurlyeq 0 \iff (f)+(\om)-\mcD\succcurlyeq \iff (f\om)-\mcD\succcurlyeq0\iff f\in \Om(\mcD)$$Hence $\varphi$ is an isomorphism. Therefore $\delta(\mcD)=l(W-\mcD)$
+\end{proof}

@@ -1,0 +1,42 @@
+\chapter{Codes from Algebraic Curves}
+We have now came to define the Algebraic Geometric Codes.
+\section{Preliminaries}
+ First we will define the system where we will define the codes.
+\begin{itemize}
+	\item Our alphabet will be $\bbF_q$
+	\item We will consider the functions $f\in \bbF_q[X_1,\dots, X_n]$. Sometimes we will write $\ovX$ to denote $(X_1,\dots, X_n)$. $n$ depends on the context
+	\item If the affine curve $\mcX$ over $\bbF_q$ is defined by a prime ideal $I$ in $\bbF_q[\ovX]$ then its coordinate ring $\bbF_q[\mcX]=\bbF_q[\ovX]/I$ and its function field $\bbF_q(\mcX)$ is the quotient field of $\bbF_q[\mcX]$.
+	\item It is always assumed that the curve is \textit{absolutely irreducible}, i.e.  the defining ideal is also prime in $\bbF[\ovX]$ where $\bbF\coloneqq \overline{\bbF_q}$ i.e. $\bbF$ is the algebraic closure of $\bbF_q$.
+\end{itemize}
+Similar adaptations are made for projective curves. 
+
+\begin{observation*}
+	For any $F\in \bbF_q[\ovX]$, $F(x_1,\dots, x_n)^q=F(x_1^q,\dots, x_n^q)$. So if $(x_1,\dots, x_n)$ is a zero of $F$ and $F$ is defined over $\bbF_q$ then $(x_1^q,\dots, x_n^q)$ is also a zero of $F$.
+\end{observation*}
+We can extend the \textit{Frobenius Map}, $Fr:x\mapsto x^q$ coordinate-wise to points in affine and projective space by $Fr(x_1,\dots, x_n)=(x_1^q,\dots, x_n^q)$. If $\mcX$ is a curve defined over $\bbF_q$ and $P$ is a point of $\mcX$, then $Fr(P)$ is also a  point of $\mcX$.
+
+\begin{definition}[Rational Divisor]
+	A divisor $\mcD$ on $\mcX$ is called rational if the coefficients of $P$ and $Fr(P)$ is $\mcD$ are the same for any point $P$ of $\mcX$.
+\end{definition}
+\begin{remark}
+	Now on the space $\mcL(\mcD)$ will only be considered for rational divisors and as before but with the restriction of the rational functions to $\bbF_q(\mcX)$
+\end{remark}
+
+Let $\mcW$ be an absolutely irreducible nonsingular projective curve over $\bbF_q$. We will define two kinds of algebraic geometry codes from $\mcX$, \textit{Geometric Reed Solomon Codes} and \textit{Geometric Goppa Codes}. Let $P_1,\dots, P_n$ are rational points on $\mcX$ and $\mcD$ be the divisor $\mcD=P_1+\dots +P_n$. Furthermore $\mcG$ is some other divisor that has support disjoint from $\mcD$. 
+\begin{remark}
+	We will make more restrictions on $\mcG$, $\deg(\mcG)>2g-2$
+\end{remark}
+\section{Geometric Reed Solomon Codes}
+With the setting as above we define 
+\begin{definition}[Geometric Reed Solomon Codes]
+	The linear code $C(\mcD,\mcG)$ of length $n$ over $\bbF_q$ is the image of the linear map $\alpha:\mcL(\mcG)\to \bbF_q^n$ defined by $\alpha(f)=(f(P_1),\dots, f(P_n))$
+\end{definition}
+\begin{theorem}
+	The code $C(\mcD,\mcG)$ has dimension $k=\deg(\mcG)-(g-1)$ and distance $d\geq n-\deg(\mcG)$
+\end{theorem}
+\begin{corollary}
+	$k+d\geq n-(g-1)$ 
+\end{corollary}
+\begin{proof}
+	$k+n\geq \deg(\mcG)-(g-1) +  n-\deg(\mcG)=n-(g-1)$
+\end{proof}
