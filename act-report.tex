@@ -6,12 +6,12 @@
 \input{letterfonts}
 \input{macros}
 
-\definecolor{mycolor1}{RGB}{0,90,180}
+\definecolor{mycolor1}{RGB}{10,120,10}
 \definecolor{mycolor2}{RGB}{240,240,240}
 %\usepackage{anysize}
 %\marginsize{1.5in}{1in}{0.5in}{0.5in}
 
-\newcommand*{\titre}[2]{\begingroup
+\newcommand*{\titre}[1]{\begingroup
 	\newlength{\drop}
 	\setlength{\drop}{0.1\textheight}
 	\centering
@@ -23,13 +23,19 @@
 %	{\large\itshape Instructor: #2}\\[0.2\baselineskip]
 	\rule{\unitlength}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
 	\rule{\unitlength}{1.6pt}\\[4\baselineskip]
-	{\Large \begin{center}
+	{\LARGE \begin{center}
 			\begin{tabular}{ccc}
 				\textsc{Soham Chatterjee} & \ \hspace*{3cm} & \textsc{Shree Ganesh S J}\\
 				sohamc@cmi.ac.in & & shreeganesh@cmi.ac.in\\
 				BMC202175 & & MCS202219
 			\end{tabular}
-	\end{center} }\par
+			\vspace{3cm}
+			
+			\Large Course: Algorithmic Coding Theory\\
+			Instructor: Amit Kumar Sinhababu\\[3\baselineskip]
+			Chennai Mathematical Institute
+	\end{center} } \par
+
 	\vfill
 	{\large\scshape 2023}\par
 	\endgroup}
@@ -60,14 +66,16 @@
 		\node [xshift=\paperwidth/2,yshift=\paperheight/2] at (current page.south west)[minimum width=\paperwidth,minimum height=\paperheight,top color=mycolor1,bottom color=mycolor2]{};
 	\end{tikzpicture}\\[3\baselineskip]
 			
-	\titre{Algebraic Geometric Codes}{}
+	\titre{Algebraic Geometric Codes}
 \end{titlepage}
-		
+	
+\input{ch-abstract}	
+	
 \pagebreak
 \tableofcontents 
 \pagebreak
 		
-		
+
 \input{ch-math}
 \input{ch-agcode}
 \input{ch-goodcodebound}		
