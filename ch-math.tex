@@ -31,18 +31,18 @@ This field of coding theory is studied since the publication of Goppa's paper de
 \end{definition}
 The set of all derivations $D:\bbF(\mcX)\to\mcV$ will be denoted by $Der(\mcX.\mcV)$. $Der(\mcX,\mcV)$ forms a vector space over $\bbF(\mcX)$. We denote $Der(\mcX,\mcV)$ by $Der(\mcX)$ if $\mcV=\bbF(\mcX)$. 
 \begin{theorem}
-	Let $t$ be a local parameter at a point $P$. Then there exists a unique derivation $D_t:\bbF(\mcX)\to \bbF(\mcX)$  such that $D_t(t)=1$ and $\dim(Der_{\bbF(\mcX)}(\mcX))=1$ and $D_t$ is a basis element for every local parameter $t$
+	Let $t$ be a local parameter at a point $P$. Then there exists a unique derivation $D_t:\bbF(\mcX)\to \bbF(\mcX)$  such that $D_t(t)=1$ and $\dim_{\bbF(\mcX)}(Der(\mcX))=1$ and $D_t$ is a basis element for every local parameter $t$
 \end{theorem}
 \begin{definition}[Differential]
-	A rational differential form or differential on $\mcX$ is an $\bbF9\mcX)$-linear map from $Der(\mcX)$ to $\bbF(\mcX)$. The set of all rational differential forms $\mcX$ is denoted by $\Om[\mcX]$.
+	A rational differential form or differential on $\mcX$ is an $\bbF9\mcX)$-linear map from $Der(\mcX)$ to $\bbF(\mcX)$. The set of all rational differential forms $\mcX$ is denoted by $\Om(\mcX)$.
 \end{definition}
-Again $\Om[\mcX]$ forms a vector space over $|bbF(\mcX)$. The differential $df:Der(\mcX)\to \bbF(\mcX)$ is defined by $df(D)=D(f)$ for all $D\in Der(\mcX)$. Then $d$ is a derivation.
+Again $\Om(\mcX)$ forms a vector space over $\bbF(\mcX)$. The differential $df:Der(\mcX)\to \bbF(\mcX)$ is defined by $df(D)=D(f)$ for all $D\in Der(\mcX)$. Then $d$ is a derivation.
 \begin{theorem}
-	$\dim_{\bbF(\mcX)}(\Om[\mcX])=1$ and $dt$ is a basis for every point $P$ with local parameter $t$.
+	$\dim_{\bbF(\mcX)}(\Om(\mcX))=1$ and $dt$ is a basis for every point $P$ with local parameter $t$.
 \end{theorem}
-For every point $P$ and local parameter $t_P$ a differential  $\om$ on $\mcX$ can be represented in a unique way as $\om=f_Pdt_P$ where $f_P$ is a rational function. The order or valuation of $\om$ at $P$ is defined by $v_P(\om)=v_P(f_P)$.
+For every point $P$ and local parameter $t_P$ a differential  $\om$ on $\mcX$ can be represented in a unique way as $\om=f_Pdt_P$ where $f_P$ is a rational function. The order or valuation of $\om$ at $P$ is defined by $v_P(\om)=v_P(f_P)$. A differential form $\om$ is called \textit{regular} if it has no poles. The regular differentials on $\mcX$ form an $\bbF[\mcX]$-module which we denote by $\Om[\mcX]$
 \begin{definition}[Canonical Divisor]
-	Let $|om$ be a differential then the divisor $(\om)$ is defined by $$(\om)=\sum_{P\in \mcX}v_P(\om)P$$Divisors of differentials are called canonical divisor. 
+	Let $\om$ be a differential then the divisor $(\om)$ is defined by $$(\om)=\sum_{P\in \mcX}v_P(\om)P$$Divisors of differentials are called canonical divisor. 
 \end{definition}
 If $\om'$ be another nonzero differential then $\om'=f\om$ for some rational function $f$. Hence canonical divisors form one equivalence class. Let $W$ denote the divisor of the differential $\om$. Hence  $\mcL(W)\equiv \Om[\mcX]$
 \begin{definition}[Genus of a Curve]
